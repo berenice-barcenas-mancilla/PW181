@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Ruta para el formulario de inicio de sesión personalizado
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
+
