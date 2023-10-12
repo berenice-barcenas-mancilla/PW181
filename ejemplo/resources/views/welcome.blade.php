@@ -9,6 +9,10 @@
 
 </head>
 <body style="background-color:#F0F4FC">
-    <x-login />    
+     <!--
+     <x-login />    -->
+
+     @component('components.login')
+     @endcomponent
 </body>
 </html>

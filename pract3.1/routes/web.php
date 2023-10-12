@@ -39,3 +39,5 @@ Route::get('/form', function () { return view('form');})->name('formularios');
 |
 */
 Route::get('/memories', function () { return view('memories');})->name('recuerdos'); 
+
+Route::get('/vista', function () {return view('vista');})->name('vista');
