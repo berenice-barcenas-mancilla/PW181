@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DiaryController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,25 +18,30 @@ use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
-| RUTA DE VISTA PRINCIPAL
+| VISTA PRINCIPAL
 |--------------------------------------------------------------------------
 |
 */
-Route::get('/', function () { return view('welcome');})->name('inicio');
 
-
-/*
-|--------------------------------------------------------------------------
-| RUTA DE FORMULARIOS
-|--------------------------------------------------------------------------
-|
-*/
-Route::get('/form', function () { return view('form');})->name('formularios'); 
+// List
+Route::get('/', [DiaryController::class, 'metodoInicio'])->name('inicio');
 
 /*
 |--------------------------------------------------------------------------
-| RUTAS DE MEMORIES
+| FORMULARIOS
 |--------------------------------------------------------------------------
 |
 */
-Route::get('/memories', function () { return view('memories');})->name('recuerdos'); 
+
+// List
+Route::get('/form', [DiaryController::class, 'metodoFormulario'])->name('formularios');
+
+/*
+|--------------------------------------------------------------------------
+| MEMORIES
+|--------------------------------------------------------------------------
+|
+*/
+
+// List
+Route::get('/memories', [DiaryController::class, 'metodoRecuerdos'])->name('recuerdos');
