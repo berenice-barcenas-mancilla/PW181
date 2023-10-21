@@ -26,6 +26,7 @@ use Illuminate\Support\Facades\Route;
 // List
 Route::get('/', [DiaryController::class, 'metodoInicio'])->name('inicio');
 
+
 /*
 |--------------------------------------------------------------------------
 | FORMULARIOS
@@ -35,6 +36,9 @@ Route::get('/', [DiaryController::class, 'metodoInicio'])->name('inicio');
 
 // List
 Route::get('/form', [DiaryController::class, 'metodoFormulario'])->name('formularios');
+//save
+Route::post('/guardarRecuerdo', [DiaryController::class, 'metodoGuardarRecuerdo'])->name('guardarRecuerdo');
+
 
 /*
 |--------------------------------------------------------------------------
@@ -45,3 +49,19 @@ Route::get('/form', [DiaryController::class, 'metodoFormulario'])->name('formula
 
 // List
 Route::get('/memories', [DiaryController::class, 'metodoRecuerdos'])->name('recuerdos');
+
+
+
+/*
+//List Group
+Route::controller(DiaryController::class)->group(function(){
+
+    Route::get('/','metodoInicio')->name('inicio');
+    Route::get('/form','metodoFormulario')->name('formularios');
+    Route::get('/memories','metodoRecuerdos')->name('recuerdos');
+
+
+
+    
+
+});*/
