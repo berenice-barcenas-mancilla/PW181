@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Http\Requests\validadorFormMemories;
 class DiaryController extends Controller
 {
 
@@ -14,11 +14,18 @@ class DiaryController extends Controller
     }
 
     public function metodoFormulario(){
-        return view('formulario');
+        return view('form');
     }
 
     public function metodoRecuerdos(){
-        return view('recuerdos');
+        return view('memories');
     }
+
+    public function metodoGuardarRecuerdo(validadorFormMemories $request){
+
+        
+       return $request->all();
+    }
+
 
 }
