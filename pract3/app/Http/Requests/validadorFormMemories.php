@@ -23,7 +23,7 @@ class validadorFormMemories extends FormRequest
     {
         return [
             'titulo' => 'required|max:50',
-            'recuerdo' => 'required|255',
+            'recuerdo' => 'required|max:255|min:4',
         ];
     }
 }

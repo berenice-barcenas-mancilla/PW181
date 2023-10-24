@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\validadorFormMemories;
+
 class DiaryController extends Controller
 {
 
@@ -24,7 +25,7 @@ class DiaryController extends Controller
     public function metodoGuardarRecuerdo(validadorFormMemories $request){
 
         
-       return $request->all();
+       return redirect('/form')->with('success','Tu momento desaturado llego al controlador');
     }
 
 
