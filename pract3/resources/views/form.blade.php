@@ -32,7 +32,7 @@
                     @csrf
                     <div class="mb-2">
                         <label for="title" class="form-label">Titulo del Recuerdo sin color: : </label>
-                        <input type="text" class="form-control" value="{{ old('titulo') }}" name="titulo" placeholder="Ingresa un titulo">
+                         <input type="text" class="form-control" value="{{ old('titulo') }}" name="titulo" placeholder="Ingresa un titulo">
                         <p class="text-danger fw-bold font-monospace">
                             {{ $errors->first('titulo') }}
                         </p>
