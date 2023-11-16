@@ -10,10 +10,10 @@
           <a class="nav-link {{ request()->routeIs('inicio') ? 'text-warning fw-bold' : '' }}" aria-current="page" href="{{ route('inicio') }}">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link {{request ()-> routeIS('formularios')?'text-warning fw-bold':''}}" href="{{route ('formularios')}}">Instantes Desaturados</a>
+          <a class="nav-link {{ request()->routeIs('recuerdoCreate') ? 'text-warning fw-bold' : '' }}" href="{{ route('recuerdoCreate') }}">Instantes Desaturados</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link {{request ()-> routeIS('recuerdos')?'text-warning fw-bold':''}}" href="{{route ('recuerdos')}}">Memorias en blanco y negro</a>
+          <a class="nav-link {{request ()-> routeIS('recuerdoList')?'text-warning fw-bold':''}}" href="{{route ('recuerdoList')}}">Memorias en blanco y negro</a>
         </li>
     
       </ul>

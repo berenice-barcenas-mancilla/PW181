@@ -28,7 +28,7 @@
                 "Instantes Desaturados"
             </div>
             <div class="card-body">
-                <form method="POST" action="/guardarRecuerdo">
+                <form action="/recuerdo" method="POST">
                     @csrf
                     <div class="mb-2">
                         <label for="title" class="form-label">Titulo del Recuerdo sin color: : </label>
@@ -38,7 +38,7 @@
                         </p>
                     </div>
 
-                    <div class="form-floating">
+                    <div class="form-floating mb-6">
                         <textarea class="form-control" value="{{ old('recuerdo') }}" name="recuerdo" placeholder="Ingrese el recuerdo sin color" style="height: 100px"></textarea>
                         <label for="floatingTextarea2">Recuerdo sin color</label>
                         <p class="text-danger fw-bold font-monospace">
@@ -47,6 +47,13 @@
                         </p>
                     </div>
 
+                    <div class="mb-6">
+                        <label for="title" class="form-label">Fecha del Recuerdo sin color: : </label>
+                         <input type="date" class="form-control" value="{{ old('fecha') }}" name="fecha">
+                        <p class="text-danger fw-bold font-monospace">
+                            {{ $errors->first('fecha') }}
+                        </p>
+                    </div>
             </div>
             <div class="card-footer text-body-secondary">
                 <button type="submit" class="btn  btn-outline-secondary">Guardar</button>

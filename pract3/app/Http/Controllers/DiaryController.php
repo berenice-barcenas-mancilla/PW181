@@ -15,7 +15,7 @@ class DiaryController extends Controller
     }
 
     public function metodoFormulario(){
-        return view('form');
+        //return view('form');
     }
 
     public function metodoRecuerdos(){

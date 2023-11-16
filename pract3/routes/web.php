@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CrudController;
 use App\Http\Controllers\DiaryController;
 use Illuminate\Support\Facades\Route;
 
@@ -34,10 +35,8 @@ Route::get('/', [DiaryController::class, 'metodoInicio'])->name('inicio');
 |
 */
 
-// List
-Route::get('/form', [DiaryController::class, 'metodoFormulario'])->name('formularios');
-//save
-Route::post('/guardarRecuerdo', [DiaryController::class, 'metodoGuardarRecuerdo'])->name('guardarRecuerdo');
+Route::get('recuerdo/create', [CrudController::class, 'create'])->name('recuerdoCreate');
+Route::post('/recuerdo', [CrudController::class, 'store'])->name('recuerdoStore');
 
 
 /*
@@ -48,20 +47,5 @@ Route::post('/guardarRecuerdo', [DiaryController::class, 'metodoGuardarRecuerdo'
 */
 
 // List
-Route::get('/memories', [DiaryController::class, 'metodoRecuerdos'])->name('recuerdos');
+Route::get('/memoriesList', [CrudController::class, 'index'])->name('recuerdoList');
 
-
-
-/*
-//List Group
-Route::controller(DiaryController::class)->group(function(){
-
-    Route::get('/','metodoInicio')->name('inicio');
-    Route::get('/form','metodoFormulario')->name('formularios');
-    Route::get('/memories','metodoRecuerdos')->name('recuerdos');
-
-
-
-    
-
-});*/
