@@ -31,7 +31,7 @@
                 <form action="/recuerdo" method="POST">
                     @csrf
                     <div class="mb-2">
-                        <label for="title" class="form-label">Titulo del Recuerdo sin color: : </label>
+                        <label for="title" class="form-label">Titulo del Recuerdo sin color:  </label>
                          <input type="text" class="form-control" value="{{ old('titulo') }}" name="titulo" placeholder="Ingresa un titulo">
                         <p class="text-danger fw-bold font-monospace">
                             {{ $errors->first('titulo') }}
@@ -40,7 +40,7 @@
 
                     <div class="form-floating mb-6">
                         <textarea class="form-control" value="{{ old('recuerdo') }}" name="recuerdo" placeholder="Ingrese el recuerdo sin color" style="height: 100px"></textarea>
-                        <label for="floatingTextarea2">Recuerdo sin color</label>
+                        <label for="floatingTextarea2">Recuerdo sin color:</label>
                         <p class="text-danger fw-bold font-monospace">
                             {{ $errors->first('recuerdo') }}
 
@@ -48,7 +48,7 @@
                     </div>
 
                     <div class="mb-6">
-                        <label for="title" class="form-label">Fecha del Recuerdo sin color: : </label>
+                        <label for="title" class="form-label">Fecha del Recuerdo sin color:  </label>
                          <input type="date" class="form-control" value="{{ old('fecha') }}" name="fecha">
                         <p class="text-danger fw-bold font-monospace">
                             {{ $errors->first('fecha') }}
